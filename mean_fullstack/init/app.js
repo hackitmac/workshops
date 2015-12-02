@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+// Tells Express to consider the `public` folder as the root folder for the website
+app.use(express.static('public'));
+
 // Load API Routes
 var apiRoutes = require("./routes.js");
 app.use('/', apiRoutes);
