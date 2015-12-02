@@ -1,0 +1,42 @@
+<a href ui-sref="home">Go Back</a>
+
+<h1>Create a New Event</h1>
+
+<form name="eventForm"
+  ng-submit="createEvent()"
+  >
+  <div>
+    <label>Name</label>
+    <input type="text"
+      placeholder="Event Name"
+      ng-model="event.name"
+      required
+      >
+  </div>
+
+  <div>
+    <label>Date</label>
+    <input type="date"
+      placeholder="Event Date"
+      ng-model="event.date"
+      required
+      >
+  </div>
+
+  <div>
+    <label>Description</label>
+    <textarea type="text"
+      placeholder="Event Description"
+      ng-model="event.description"
+      required
+      >
+    </textarea>
+  </div>
+
+  <div><input type="submit"></div>
+</form>
+
+<h3>Summary</h3>
+<strong>Name</strong>: {{event.name}} <br>
+<strong>Date</strong>: {{event.date}} <br>
+<strong>Description</strong>: {{event.description}}

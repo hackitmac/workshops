@@ -1,0 +1,19 @@
+<a href ui-sref="home">Go Back</a>
+
+<h1>Event Listings</h1>
+
+<div ng-repeat="event in events">
+  <a href
+    style="float: right;"
+    ng-click="deleteEvent(event, $index)"
+    >
+    Delete
+  </a>
+
+  <strong>id</strong>: {{event._id}} <br>
+  <strong>Name</strong>: {{event.name}} <br>
+  <strong>Date</strong>: {{event.date}} <br>
+  <strong>Description</strong>: {{event.description}} <br>
+
+  <hr ng-if="!$last">
+</div>
